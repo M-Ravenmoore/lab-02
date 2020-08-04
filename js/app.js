@@ -6,6 +6,6 @@
 // use 5 y/n answers to make personal greating for user including user name
 // useing switch and if else coding
 
-Var userName= prompt ('Can i have your name please?');
+var userName= prompt ('Can i have your name please?');
 console.log('The Users Name is' + userName);
 

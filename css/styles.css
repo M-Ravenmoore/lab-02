@@ -1,8 +1,36 @@
-h1 {font-size: 42pt;
+* {
+  max-width: 1080px;
 }
 
-h2 {font-size: 36pt;
+#project {font-weight: 900;
+  font-size: 1.25em;
+  padding-top:10px;
+  ;
 }
 
-h3 {font-size: 30pt;
+h1 {
+  font-size: 50pt;
+  color: darkblue;
+  text-align: center;
 }
+
+h2 {
+  font-size: 34pt;
+  color: darkred;
+}
+
+h3 {
+  font-size: 26pt;
+}
+
+body {background-color: dimgray;}
+
+header {background-color: lightslategrey;
+        margin: 15px auto;
+        border: black 5px ridge}
+
+article {background-color:lightseagreen;
+        padding: 10px;
+        margin:5px auto;
+        max-width: 960px;
+        border: olive 3px ridge;

@@ -26,7 +26,8 @@ h3 {
 body {background-color: dimgray;}
 
 header {background-color: lightslategrey;
-        margin: 15px auto;
+        margin: 15px;
+        max-width: 1060;
         border: black 5px ridge}
 
 article {background-color:lightseagreen;

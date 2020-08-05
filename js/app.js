@@ -1,44 +1,60 @@
 'use strict';
 
-// design notes to start
-// 5 y/n questions and user name propts at beging
-// console log responses to be used later
-// use 5 y/n answers to make personal greating for user including user name
-// useing switch and if else coding
-
 var userName= prompt ('Can i have your name please?');
 console.log('The Users Name is' + userName);
 
-var answer1= prompt('Is the Sky blue?');
-if (answer1.toLowerCase() === 'yes' || answer1.toLowerCase() === 'y'){
-  console.log('correct the sky is blue');
-} else if (answer1.toLowerCase() === 'no' || answer1.toLowerCase() === 'n'){console.log('Try again Next time');
+var answer1 ;
+var answer2 ;
+var answer3 ;
+var answer4 ;
+var answer5 ;
+
+
+var question1= prompt('Is the Sky blue?');
+if (question1.toLowerCase() === 'yes' || question1.toLowerCase() === 'y'){
+  answer1 = 'correct the sky is blue';
+  // console.log(answer1 = 'correct the sky is blue');
+} else if (question1.toLowerCase() === 'no' || question1.toLowerCase() === 'n'){
+  answer1 = 'Try again Next time';
+  // console.log(answer1 = 'Try again Next time');
 } else alert('incorrect response please use Y/N or Yes/No');
 
-var answer2= prompt('Do woodchucks chuck wood?');
-if (answer2.toLowerCase() === 'yes' || answer2.toLowerCase() === 'y'){
-  console.log('Sorry i dont Think so');
-} else if (answer2.toLowerCase() === 'no' || answer2.toLowerCase() === 'n'){console.log('Nope they dont your right');
+var question2= prompt('Do woodchucks chuck wood?');
+if (question2.toLowerCase() === 'yes' || question2.toLowerCase() === 'y'){
+  answer2 = 'Sorry i dont Think so';
+  // console.log(answer2 = 'Sorry i dont Think so');
+} else if (question2.toLowerCase() === 'no' || question2.toLowerCase() === 'n'){
+  answer2 = 'Nope they dont your right';
+  // console.log(answer2 = 'Nope they dont your right');
 } else alert('incorrect response please use Y/N or Yes/No');
 
-var answer3= prompt('Gravity works Yes or no?');
-if (answer3.toLowerCase() === 'yes' || answer3.toLowerCase() === 'y'){
-  console.log('Most of the time your are correct');
-} else if (answer3.toLowerCase() === 'no' || answer3.toLowerCase() === 'n'){console.log('Not always no');
+var question3= prompt('Gravity works Yes or no?');
+if (question3.toLowerCase() === 'yes' || question3.toLowerCase() === 'y'){
+  answer3 = 'Most of the time your are correct';
+  // console.log(answer3 = 'Most of the time your are correct');
+} else if (question3.toLowerCase() === 'no' || question3.toLowerCase() === 'n'){
+  answer3 = 'Not always no';
+  // console.log(answer3 = 'Not always no');
 } else alert('incorrect response please use Y/N or Yes/No');
 
-var answer4= prompt('will the Cyote ever catch The road runner?');
-if (answer4.toLowerCase() === 'yes' || answer4.toLowerCase() === 'y'){
-  console.log('Not if he keeps useing AMCE products');
-} else if (answer4.toLowerCase() === 'no' || answer4.toLowerCase() === 'n'){console.log('That bird is too fast');
+var question4= prompt('will the Cyote ever catch The road runner?');
+if (question4.toLowerCase() === 'yes' || question4.toLowerCase() === 'y'){
+  answer4 = 'Not if he keeps useing AMCE products';
+  // console.log(answer4 = 'Not if he keeps useing AMCE products');
+} else if (question4.toLowerCase() === 'no' || question4.toLowerCase() === 'n'){
+  answer4 = 'That bird is too fast';
+  // console.log(answer4 = 'That bird is too fast');
 } else alert('incorrect response please use Y/N or Yes/No');
 
-var answer5= prompt( 'The world is Flat yes or no?');
-if (answer5.toLowerCase() === 'yes' || answer5.toLowerCase() === 'y'){
-  console.log('GO READ A BOOK');
-} else if (answer5.toLowerCase() === 'no' || answer5.toLowerCase() === 'n'){console.log('Thank you for having a brain');
+var question5= prompt( 'The world is Flat yes or no?');
+if (question5.toLowerCase() === 'yes' || question5.toLowerCase() === 'y'){
+  answer5 = 'NO, GO READ A BOOK';
+  // console.log(answer5 = 'NO, GO READ A BOOK');
+} else if (question5.toLowerCase() === 'no' || question5.toLowerCase() === 'n'){
+  answer5 = 'Thank you for having a brain';
+  // console.log(answer5 = 'Thank you for having a brain');
 } else alert('incorrect response please use Y/N or Yes/No');
 
 
-alert('Welcome' + userName + 'to my about me game');
-// alert('The answers to your questions are: ' + answer1 + ', ' + answer2 + ', ' + answer3 + ', ' + answer4 + ', ' + answer5 + '.')
+alert('Welcome ' + userName + ', to my about me game! The results of your quiz are as follows');
+alert('Question 1: ' + answer1 + ' Question 2: ' + answer2 + ' Question 3: ' + answer3 + ' Question 4: ' + answer4 + ' Question 5: ' + answer5 + '.  How Did You Do?');

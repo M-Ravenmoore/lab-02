@@ -89,6 +89,8 @@ function guessNum() {
   }
 }
 
+// changes testing a thing)?
+
 
 alert('Welcome ' + userName + ', to my about me game! The results of your quiz are as follows');
 alert('Question 1: Is the Sky blue?' + answer1() + ' Question 2: Do woodchucks chuck wood?' + answer2() + ' Question 3: Gravity works Yes or no?' + answer3() + ' Question 4: will the Cyote ever catch The road runner?' + answer4() + ' Question 5: The world is Flat yes or no? ' + answer5() + '.  How Did You Do?');

@@ -2,6 +2,15 @@
   max-width: 1080px;
 }
 
+#edu, #exp {
+  display: inline-block;
+}
+
+#top {
+  margin: 0 auto;
+  width: 350px;
+}
+
 #project {
   font-weight: 900;
   font-size: 1.25em;
@@ -41,4 +50,6 @@ article {
   margin:5px auto;
   max-width: 960px;
   border: olive 3px ridge;
+  justify-content: center;
+
 }

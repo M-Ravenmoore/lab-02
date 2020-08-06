@@ -55,6 +55,9 @@ if (question5.toLowerCase() === 'yes' || question5.toLowerCase() === 'y'){
   // console.log(answer5 = 'Thank you for having a brain');
 } else alert('incorrect response please use Y/N or Yes/No');
 
+var guessNum = prompt('pick a number between 1 and 25')
+For(var i=0 )
+
 
 alert('Welcome ' + userName + ', to my about me game! The results of your quiz are as follows');
 alert('Question 1: Is the Sky blue?' + answer1 + ' Question 2: Do woodchucks chuck wood?' + answer2 + ' Question 3: Gravity works Yes or no?' + answer3 + ' Question 4: will the Cyote ever catch The road runner?' + answer4 + ' Question 5: The world is Flat yes or no? ' + answer5 + '.  How Did You Do?');

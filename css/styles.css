@@ -2,7 +2,8 @@
   max-width: 1080px;
 }
 
-#project {font-weight: 900;
+#project {
+  font-weight: 900;
   font-size: 1.25em;
   padding-top:10px;
   ;
@@ -23,15 +24,21 @@ h3 {
   font-size: 26pt;
 }
 
-body {background-color: dimgray;}
+body {
+  background-color: dimgray;
+}
 
-header {background-color: lightslategrey;
-        margin: 15px;
-        max-width: 1060;
-        border: black 5px ridge}
+header {
+  background-color: lightslategrey;
+  margin: 15px;
+  max-width: 1060;
+  border: black 5px ridge
+}
 
-article {background-color:lightseagreen;
-        padding: 10px;
-        margin:5px auto;
-        max-width: 960px;
-        border: olive 3px ridge;
+article {
+  background-color:lightseagreen;
+  padding: 10px;
+  margin:5px auto;
+  max-width: 960px;
+  border: olive 3px ridge;
+}

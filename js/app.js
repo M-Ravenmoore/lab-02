@@ -4,7 +4,7 @@
 // get user info and store for later
 function userName(){
 var userName = prompt ('Can i have your name please?');
-console.log('The Users Name is' + userName);
+console.log('The Users Name is ' + userName);
 return userName
 };
 
@@ -23,131 +23,154 @@ alert('welcome ' + playerName);
 function convertUserInput(userInput){
   if(userInput.toLowerCase() === 'yes' || userInput.toLowerCase() === 'y'){
     return 'yes';
-  } else if(userInput.toLowerCase()=== 'no' || userInput.toLowerCase() === 'n'){
+  } else if(userInput.toLowerCase() === 'no' || userInput.toLowerCase() === 'n'){
     return 'no';
+  } else {
+      return null;
+    }
+  console.log('The player answered ' + convertUserInput())
+}
+
+//Question 1
+function question1() {
+  var convertedAnswer1 = null;
+  while(convertedAnswer1 === null) {
+    var answer1= prompt('Is the Sky blue?');
+    convertedAnswer1 = convertUserInput(answer1);
   }
+  if (convertedAnswer1 === 'yes'){
+    answer1 = 'correct the sky is blue';
+    console.log(answer1);
+  } else if (convertedAnswer1 === 'no'){
+    answer1 = 'Try again Next time';
+    console.log(answer1);
+  }
+  console.log(playerName + ' answered ' + convertedAnswer1 + ' to Q1!');
+  alert(answer1);
+  return answer1;
+}
+
+// Question 2
+function question2() {
+  var convertedAnswer2 = null;
+  while(convertedAnswer2 === null) {
+    var answer2= prompt('Do wood chucks chuck wood?');
+    convertedAnswer2 = convertUserInput(answer2);
+  }
+  if (convertedAnswer2 === 'yes'){
+    answer2 = 'Sorry i dont think so';
+    console.log(answer2);
+  } else if (convertedAnswer2 === 'no'){
+    answer2 = 'Nope, they dont your right';
+    console.log(answer2);
+  }
+  console.log(playerName + ' answered ' + convertedAnswer2 + ' to Q2!');
+  alert(answer2);
+  return answer2;
+}
+
+// Question 3
+function question3() {
+  var convertedAnswer3 = null;
+  while(convertedAnswer3 === null) {
+    var answer3= prompt('Gravity works yes or no?');
+    convertedAnswer3 = convertUserInput(answer3);
+  }
+  if (convertedAnswer3 === 'yes'){
+    answer3 = 'Most of the time you are correct!';
+    console.log(answer3);
+  } else if (convertedAnswer3 === 'no'){
+    answer3 = 'Not always no';
+    console.log(answer3);
+  }
+  console.log(playerName + ' answered ' + convertedAnswer3 + ' to Q3!');
+  alert(answer3);
+  return answer3;
+}
+
+// Question 4
+function question4() {
+  var convertedAnswer4 = null;
+  while(convertedAnswer4 === null) {
+    var answer4= prompt('Will the Cyote ever catch The Road Runner?');
+    convertedAnswer4 = convertUserInput(answer4);
+  }
+  if (convertedAnswer4 === 'yes'){
+    answer4 = 'Not if he keeps using ACME products';
+    console.log(answer4);
+  } else if (convertedAnswer4 === 'no'){
+    answer4 = 'That bird is too Fast';
+    console.log(answer4);
+  }
+  console.log(playerName + ' answered ' + convertedAnswer4 + ' to Q4!');
+  alert(answer4);
+  return answer4;
+}
+
+// Question5
+function question5() {
+  var convertedAnswer5 = null;
+  while(convertedAnswer5 === null) {
+    var answer5= prompt('Is the world flat?');
+    convertedAnswer5 = convertUserInput(answer5);
+  }
+  if (convertedAnswer5 === 'yes'){
+    answer5 = 'No, Go READ A BOOK';
+    console.log(answer5);
+  } else if (convertedAnswer5 === 'no'){
+    console.log(answer5);
+    answer5 = 'Thank you for having a brain';
+  }
+  console.log(playerName + ' answered ' + convertedAnswer5 + ' to Q5');
+  alert(answer5);
+  return answer5;
 }
 
 
-// add a console log to convert answer
+function guessNum() {
+  var correctAnswer = math.floor(math.random(25));
+  var guessNum = Number(prompt('pick a number between 1 and 25'));
+  for (var i = 0; i < 4; i++) {
+    if (guessNum === correctAnswer) {
+    console.log('Wow you got it!');
+    break;
+    } else if (guessNum < correctAnswer) {
+    console.log('Too low, try again.');
+    guessNum = Number(prompt('pick a number between 1 and 25'));
+    } else if (guessNum > correctAnswer) {
+    console.log('Too high, try again.');
+    guessNum = Number(prompt('pick a number between 1 and 25'));
+    } else {
+    console.log('Invalid response');
+    guessNum = Number(prompt('pick a number between 1 and 25'));
+    }
+  }
+}
 
-
-// function startGame(){
-  //   var startGame = prompt('would you like to play a game?'){
+// function question6(){
+  //   var answerArr[Apple pie, Mac and Cheese, Beef ribs];
+  //   // question to ask what 3 things would i put to gether for a meal?
+  // user gets 6 trys to get all 3
+  // // ?all options to be visible to user`
+  
+  //   for (var i = 0; i < 5; i++){
+    
+    //   }
     // }
     
     
-    function question1() {
-      var convertedAnswer1 = null;
-      while(convertedAnswer1 === null) {
-        var answer1= prompt('Is the Sky blue?');
-        console.log(playerName + ' answered ' + convertedAnswer1 + ' to Q1!')
-        convertedAnswer1 = convertUserInput(answer1);
-      }
-      if (convertedAnswer1 === 'yes'){
-        answer1 = 'correct the sky is blue';
-        // console.log(answer1 = 'correct the sky is blue');
-      } else if (convertedAnswer1 === 'no'){
-        answer1 = 'Try again Next time';
-        // console.log(answer1 = 'Try again Next time');
-      }
-      return answer1;
-    }
 question1();
+question2();
+question3();
+question4();
+question5();
 
-
-//     function answer2() {
-//   var answer2;
-//   var question2= prompt('Do woodchucks chuck wood?');
-//   if (question2.toLowerCase() === 'yes' || question2.toLowerCase() === 'y'){
-//     answer2 = 'Sorry i dont Think so';
-//     // console.log(answer2 = 'Sorry i dont Think so');
-//   } else if (question2.toLowerCase() === 'no' || question2.toLowerCase() === 'n'){
-//     answer2 = 'Nope they dont your right';
-//     // console.log(answer2 = 'Nope they dont your right');
-//   } else alert('incorrect response please use Y/N or Yes/No');
-//   return answer2;
-// }
-
-// function answer3() {
-//   var answer3;
-//   var question3= prompt('Gravity works Yes or no?');
-//   if (question3.toLowerCase() === 'yes' || question3.toLowerCase() === 'y'){
-//     answer3 = 'Most of the time your are correct';
-//     // console.log(answer3 = 'Most of the time your are correct');
-//   } else if (question3.toLowerCase() === 'no' || question3.toLowerCase() === 'n'){
-//     answer3 = 'Not always no';
-//     // console.log(answer3 = 'Not always no');
-//   } else alert('incorrect response please use Y/N or Yes/No');
-//   return answer3;
-// }
-
-// function answer4() {
-//   var answer4;
-//   var question4= prompt('will the Coyote ever catch The road runner?');
-//   if (question4.toLowerCase() === 'yes' || question4.toLowerCase() === 'y'){
-//     answer4 = 'Not if he keeps useing AMCE products';
-//     // console.log(answer4 = 'Not if he keeps useing AMCE products');
-//   } else if (question4.toLowerCase() === 'no' || question4.toLowerCase() === 'n'){
-//     answer4 = 'That bird is too fast';
-//     // console.log(answer4 = 'That bird is too fast');
-//   } else alert('incorrect response please use Y/N or Yes/No');
-//   return answer4;
-// }
-
-// function answer5() {
-//   var answer5;
-//   var question5= prompt( 'The world is Flat yes or no?');
-//   if (question5.toLowerCase() === 'yes' || question5.toLowerCase() === 'y'){
-//     answer5 = 'NO, GO READ A BOOK';
-//     // console.log(answer5 = 'NO, GO READ A BOOK');
-//   } else if (question5.toLowerCase() === 'no' || question5.toLowerCase() === 'n'){
-//     answer5 = 'Thank you for having a brain';
-//     // console.log(answer5 = 'Thank you for having a brain');
-//   } else alert('incorrect response please use Y/N or Yes/No');
-//   return answer5;
-// }
-
-
-// function guessNum() {
-//   var correctAnswer = math.floor(math.random(25));
-//   var guessNum = Number(prompt('pick a number between 1 and 25'));
-//   for (var i = 0; i < 4; i++) {
-//     if (guessNum === correctAnswer) {
-//       console.log('Wow you got it!');
-//       break;
-//     } else if (guessNum < correctAnswer) {
-//       console.log('Too low, try again.');
-//       guessNum = Number(prompt('pick a number between 1 and 25'));
-//     } else if (guessNum > correctAnswer) {
-//       console.log('Too high, try again.');
-//       guessNum = Number(prompt('pick a number between 1 and 25'));
-//     } else {
-//       console.log('Invalid response');
-//       guessNum = Number(prompt('pick a number between 1 and 25'));
-//     }
-//   }
-// }
-
-// function question6(){
-//   var answerArr[Apple pie, Mac and Cheese, Beef ribs];
-//   // question to ask what 3 things would i put to gether for a meal?
-// user gets 6 trys to get all 3
-// // ?all options to be visible to user`
-
-//   for (var i = 0; i < 5; i++){
-
-//   }
-// }
-
-// guessNum();
-
-
-
-
-//work to add still
-// point counter for number of right answer in game
-
-
-// alert('Welcome ' + userName + ', to my about me game! The results of your quiz are as follows');
-// alert('Question 1: Is the Sky blue?' + answer1() + ' Question 2: Do woodchucks chuck wood?' + answer2() + ' Question 3: Gravity works Yes or no?' + answer3() + ' Question 4: will the Cyote ever catch The road runner?' + answer4() + ' Question 5: The world is Flat yes or no? ' + answer5() + '.  How Did You Do?');
+guessNum();
+    
+    
+    //work to add still
+    // point counter for number of right answer in game
+    
+    
+    // alert('Welcome ' + userName + ', to my about me game! The results of your quiz are as follows');
+    // alert('Question 1: Is the Sky blue?' + answer1() + ' Question 2: Do woodchucks chuck wood?' + answer2() + ' Question 3: Gravity works Yes or no?' + answer3() + ' Question 4: will the Cyote ever catch The road runner?' + answer4() + ' Question 5: The world is Flat yes or no? ' + answer5() + '.  How Did You Do?');

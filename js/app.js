@@ -126,13 +126,25 @@ function question5() {
   return answer5;
 }
 
+// function question6()    {
+  // var answer6 = prompt('Tell me what 3 things i would put to getheter for a supurb meal');
+  
+  
+  // var foodArr = ['Lobster Ravioli', 'Mac and Cheese', 'Apple pie', 'Shepards pie', 'lava Cakes', 'Beef ribs', 'Brusselsprouts', 'Key Lime tarts', 'Stuffed Mushrooms'];
+  
+  // var answerArr = ['Apple pie', 'Mac and Cheese', 'Beef ribs'];
+  // for (var i = 0; i < 5; i++){
+  //   if (answer6 === answerArr[        ] )
+  // }
+// all options to be visible to user
 
 function numberGuesser() {
   var guessNum = Number(prompt('pick a number between 1 and 25'));
   var correctAnswer = Math.floor(Math.random() * 26);
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i < 3; i++) {
     if (guessNum === correctAnswer) {
     console.log('Wow you got it!');
+    alert('thats right! Exactly')
     break;
     } else if (guessNum < correctAnswer) {
     console.log('Too low, try again.');
@@ -148,14 +160,10 @@ function numberGuesser() {
     guessNum = Number(prompt('pick a number between 1 and 25'));
     }
   }
+  alert('your out of trys thank you for playing')
   return guessNum;
 }
 
-// function question6(){
-//  var answerArr[Apple pie, Mac and Cheese, Beef ribs];
-// question to ask what 3 things would i put to gether for a meal?
-// user gets 6 trys to get all 3
-// all options to be visible to user`
 
     
     
@@ -166,7 +174,3 @@ question4();
 question5();
 
 numberGuesser();
-    
-    
-//work to add still
-// point counter for number of right answer in game

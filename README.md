@@ -10,6 +10,7 @@ partner coding with Sara Russert driving and Matt Hudson navigating
 
 ### Links and Resources
 * [linking styles refesher](https://www.w3schools.com/tags/att_script_src.asp)
+* [code review with mentor in feild] former student Chris Hudson. helped to dry out my code.
 
 ### Reflections and Comments
 

@@ -127,36 +127,36 @@ function question5() {
 }
 
 
-function guessNum() {
-  var correctAnswer = math.floor(math.random(25));
+function numberGuesser() {
   var guessNum = Number(prompt('pick a number between 1 and 25'));
+  var correctAnswer = Math.floor(Math.random() * 26);
   for (var i = 0; i < 4; i++) {
     if (guessNum === correctAnswer) {
     console.log('Wow you got it!');
     break;
     } else if (guessNum < correctAnswer) {
     console.log('Too low, try again.');
+    alert('Too low, Try again.')
     guessNum = Number(prompt('pick a number between 1 and 25'));
     } else if (guessNum > correctAnswer) {
     console.log('Too high, try again.');
+    alert('Too high, try again')
     guessNum = Number(prompt('pick a number between 1 and 25'));
     } else {
     console.log('Invalid response');
+    alert('Invalid response');
     guessNum = Number(prompt('pick a number between 1 and 25'));
     }
   }
+  return guessNum;
 }
 
 // function question6(){
-  //   var answerArr[Apple pie, Mac and Cheese, Beef ribs];
-  //   // question to ask what 3 things would i put to gether for a meal?
-  // user gets 6 trys to get all 3
-  // // ?all options to be visible to user`
-  
-  //   for (var i = 0; i < 5; i++){
-    
-    //   }
-    // }
+//  var answerArr[Apple pie, Mac and Cheese, Beef ribs];
+// question to ask what 3 things would i put to gether for a meal?
+// user gets 6 trys to get all 3
+// all options to be visible to user`
+
     
     
 question1();
@@ -165,12 +165,8 @@ question3();
 question4();
 question5();
 
-guessNum();
+numberGuesser();
     
     
-    //work to add still
-    // point counter for number of right answer in game
-    
-    
-    // alert('Welcome ' + userName + ', to my about me game! The results of your quiz are as follows');
-    // alert('Question 1: Is the Sky blue?' + answer1() + ' Question 2: Do woodchucks chuck wood?' + answer2() + ' Question 3: Gravity works Yes or no?' + answer3() + ' Question 4: will the Cyote ever catch The road runner?' + answer4() + ' Question 5: The world is Flat yes or no? ' + answer5() + '.  How Did You Do?');
+//work to add still
+// point counter for number of right answer in game

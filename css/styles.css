@@ -4,6 +4,7 @@
 
 #edu, #exp {
   display: inline-block;
+  margin: 01px auto;
 }
 
 #top {
@@ -15,7 +16,6 @@
   font-weight: 900;
   font-size: 1.25em;
   padding-top:10px;
-  ;
 }
 
 h1 {

@@ -22,89 +22,92 @@ alert('welcome ' + playerName);
 function convertUserInput(userInput){
   if(userInput.toLowerCase() === 'yes' || userInput.toLowerCase() === 'y'){
     return 'yes';
-  } else if(userInput.toLowerCase()=== 'no' || userInput.toLowerCase()=== 'n'){
+  } else if(userInput.toLowerCase()=== 'no' || userInput.toLowerCase() === 'n'){
     return 'no';
   } else {
-    return retry();
+    return null;
   }
 }
 
 function retry(){
-var retry = prompt('Try again with something closer to yes or no');
+  var retry = prompt('Try again with something closer to yes or no');
 }
 
 
-function startGame(){
-  var startGame = prompt('would you like to play a game?'){
-}
+// function startGame(){
+  //   var startGame = prompt('would you like to play a game?'){
+    // }
+    
+    
+    function question1() {
+      var answer1= prompt('Is the Sky blue?');
+      console.log(playerName + ' answered ' + answer1 + ' to Q1!')
+      var convertedAnswer1 = convertUserInput(answer1)
+      while(convertedAnswer1 === null) {
+        retry(question1);
+      }
+      if (convertedAnswer1 === 'yes'){
+        answer1 = 'correct the sky is blue';
+        // console.log(answer1 = 'correct the sky is blue');
+      } else if (convertedAnswer1 === 'no'){
+        answer1 = 'Try again Next time';
+        // console.log(answer1 = 'Try again Next time');
+      }
+    }
+question1();
 
-function question1() {
-  var answer1= prompt('Is the Sky blue?');
-  console.log(playerName + ' answered ' + answer1 + ' to Q1!')
-  var convertedAnswer1 = convertUserInput(answer1)
-  if (convertedAnswer1 === 'yes'){
-    answer1 = 'correct the sky is blue';
-    // console.log(answer1 = 'correct the sky is blue');
-  } else (convertedAnswer1 === 'no');{
-    answer1 = 'Try again Next time';
-    // console.log(answer1 = 'Try again Next time');
-  }
-  while(convertedAnswer1 === retry()) {
-    retry();
-  }
-}
 
-function answer2() {
-  var answer2;
-  var question2= prompt('Do woodchucks chuck wood?');
-  if (question2.toLowerCase() === 'yes' || question2.toLowerCase() === 'y'){
-    answer2 = 'Sorry i dont Think so';
-    // console.log(answer2 = 'Sorry i dont Think so');
-  } else if (question2.toLowerCase() === 'no' || question2.toLowerCase() === 'n'){
-    answer2 = 'Nope they dont your right';
-    // console.log(answer2 = 'Nope they dont your right');
-  } else alert('incorrect response please use Y/N or Yes/No');
-  return answer2;
-}
+//     function answer2() {
+//   var answer2;
+//   var question2= prompt('Do woodchucks chuck wood?');
+//   if (question2.toLowerCase() === 'yes' || question2.toLowerCase() === 'y'){
+//     answer2 = 'Sorry i dont Think so';
+//     // console.log(answer2 = 'Sorry i dont Think so');
+//   } else if (question2.toLowerCase() === 'no' || question2.toLowerCase() === 'n'){
+//     answer2 = 'Nope they dont your right';
+//     // console.log(answer2 = 'Nope they dont your right');
+//   } else alert('incorrect response please use Y/N or Yes/No');
+//   return answer2;
+// }
 
-function answer3() {
-  var answer3;
-  var question3= prompt('Gravity works Yes or no?');
-  if (question3.toLowerCase() === 'yes' || question3.toLowerCase() === 'y'){
-    answer3 = 'Most of the time your are correct';
-    // console.log(answer3 = 'Most of the time your are correct');
-  } else if (question3.toLowerCase() === 'no' || question3.toLowerCase() === 'n'){
-    answer3 = 'Not always no';
-    // console.log(answer3 = 'Not always no');
-  } else alert('incorrect response please use Y/N or Yes/No');
-  return answer3;
-}
+// function answer3() {
+//   var answer3;
+//   var question3= prompt('Gravity works Yes or no?');
+//   if (question3.toLowerCase() === 'yes' || question3.toLowerCase() === 'y'){
+//     answer3 = 'Most of the time your are correct';
+//     // console.log(answer3 = 'Most of the time your are correct');
+//   } else if (question3.toLowerCase() === 'no' || question3.toLowerCase() === 'n'){
+//     answer3 = 'Not always no';
+//     // console.log(answer3 = 'Not always no');
+//   } else alert('incorrect response please use Y/N or Yes/No');
+//   return answer3;
+// }
 
-function answer4() {
-  var answer4;
-  var question4= prompt('will the Coyote ever catch The road runner?');
-  if (question4.toLowerCase() === 'yes' || question4.toLowerCase() === 'y'){
-    answer4 = 'Not if he keeps useing AMCE products';
-    // console.log(answer4 = 'Not if he keeps useing AMCE products');
-  } else if (question4.toLowerCase() === 'no' || question4.toLowerCase() === 'n'){
-    answer4 = 'That bird is too fast';
-    // console.log(answer4 = 'That bird is too fast');
-  } else alert('incorrect response please use Y/N or Yes/No');
-  return answer4;
-}
+// function answer4() {
+//   var answer4;
+//   var question4= prompt('will the Coyote ever catch The road runner?');
+//   if (question4.toLowerCase() === 'yes' || question4.toLowerCase() === 'y'){
+//     answer4 = 'Not if he keeps useing AMCE products';
+//     // console.log(answer4 = 'Not if he keeps useing AMCE products');
+//   } else if (question4.toLowerCase() === 'no' || question4.toLowerCase() === 'n'){
+//     answer4 = 'That bird is too fast';
+//     // console.log(answer4 = 'That bird is too fast');
+//   } else alert('incorrect response please use Y/N or Yes/No');
+//   return answer4;
+// }
 
-function answer5() {
-  var answer5;
-  var question5= prompt( 'The world is Flat yes or no?');
-  if (question5.toLowerCase() === 'yes' || question5.toLowerCase() === 'y'){
-    answer5 = 'NO, GO READ A BOOK';
-    // console.log(answer5 = 'NO, GO READ A BOOK');
-  } else if (question5.toLowerCase() === 'no' || question5.toLowerCase() === 'n'){
-    answer5 = 'Thank you for having a brain';
-    // console.log(answer5 = 'Thank you for having a brain');
-  } else alert('incorrect response please use Y/N or Yes/No');
-  return answer5;
-}
+// function answer5() {
+//   var answer5;
+//   var question5= prompt( 'The world is Flat yes or no?');
+//   if (question5.toLowerCase() === 'yes' || question5.toLowerCase() === 'y'){
+//     answer5 = 'NO, GO READ A BOOK';
+//     // console.log(answer5 = 'NO, GO READ A BOOK');
+//   } else if (question5.toLowerCase() === 'no' || question5.toLowerCase() === 'n'){
+//     answer5 = 'Thank you for having a brain';
+//     // console.log(answer5 = 'Thank you for having a brain');
+//   } else alert('incorrect response please use Y/N or Yes/No');
+//   return answer5;
+// }
 
 
 // function guessNum() {
@@ -127,18 +130,18 @@ function answer5() {
 //   }
 // }
 
-function question6(){
-  var answerArr[Apple pie, Mac and Cheese, Beef ribs];
-  // question to ask what 3 things would i put to gether for a meal?
+// function question6(){
+//   var answerArr[Apple pie, Mac and Cheese, Beef ribs];
+//   // question to ask what 3 things would i put to gether for a meal?
 // user gets 6 trys to get all 3
-// ?all options to be visible to user`
+// // ?all options to be visible to user`
 
-  for (var i = 0; i < 5; i++){
+//   for (var i = 0; i < 5; i++){
 
-  }
-}
+//   }
+// }
 
-guessNum();
+// guessNum();
 
 
 
@@ -146,7 +149,6 @@ guessNum();
 //work to add still
 // point counter for number of right answer in game
 
-question1();
 
-alert('Welcome ' + userName + ', to my about me game! The results of your quiz are as follows');
-alert('Question 1: Is the Sky blue?' + answer1() + ' Question 2: Do woodchucks chuck wood?' + answer2() + ' Question 3: Gravity works Yes or no?' + answer3() + ' Question 4: will the Cyote ever catch The road runner?' + answer4() + ' Question 5: The world is Flat yes or no? ' + answer5() + '.  How Did You Do?');
+// alert('Welcome ' + userName + ', to my about me game! The results of your quiz are as follows');
+// alert('Question 1: Is the Sky blue?' + answer1() + ' Question 2: Do woodchucks chuck wood?' + answer2() + ' Question 3: Gravity works Yes or no?' + answer3() + ' Question 4: will the Cyote ever catch The road runner?' + answer4() + ' Question 5: The world is Flat yes or no? ' + answer5() + '.  How Did You Do?');

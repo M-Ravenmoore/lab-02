@@ -1,19 +1,57 @@
 'use strict';
 
-var userName= prompt ('Can i have your name please?');
-console.log('The Users Name is' + userName);
 
-function answer1() {
-  var answer1;
-  var question1= prompt('Is the Sky blue?');
-  if (question1.toLowerCase() === 'yes' || question1.toLowerCase() === 'y'){
+// get user info and store for later
+function userName(){
+var userName = prompt ('Can i have your name please?');
+console.log('The Users Name is' + userName);
+};
+
+// then assign the name to a variable to be used
+var playerName = userName();
+
+// welcome guest to page
+alert('welcome ' + playerName);
+
+
+// Start of guessing game
+
+// change all user input to lowercase
+
+
+function convertUserInput(userInput){
+  if(userInput.toLowerCase() === 'yes' || userInput.toLowerCase() === 'y'){
+    return 'yes';
+  } else if(userInput.toLowerCase()=== 'no' || userInput.toLowerCase()=== 'n'){
+    return 'no';
+  } else {
+    return retry();
+  }
+}
+
+function retry(){
+var retry = prompt('Try again with something closer to yes or no');
+}
+
+
+function startGame(){
+  var startGame = prompt('would you like to play a game?'){
+}
+
+function question1() {
+  var answer1= prompt('Is the Sky blue?');
+  console.log(playerName + ' answered ' + answer1 + ' to Q1!')
+  var convertedAnswer1 = convertUserInput(answer1)
+  if (convertedAnswer1 === 'yes'){
     answer1 = 'correct the sky is blue';
     // console.log(answer1 = 'correct the sky is blue');
-  } else if (question1.toLowerCase() === 'no' || question1.toLowerCase() === 'n'){
+  } else (convertedAnswer1 === 'no');{
     answer1 = 'Try again Next time';
     // console.log(answer1 = 'Try again Next time');
-  } else alert('incorrect response please use Y/N or Yes/No');
-  return answer1;
+  }
+  while(convertedAnswer1 === retry()) {
+    retry();
+  }
 }
 
 function answer2() {
@@ -69,28 +107,46 @@ function answer5() {
 }
 
 
-function guessNum() {
-  var correctAnswer = 5;
-  var guessNum = Number(prompt('pick a number between 1 and 25'));
-  for (var i = 0; i < 4; i++) {
-    if (guessNum === correctAnswer) {
-      console.log('Wow you got it!');
-      break;
-    } else if (guessNum < correctAnswer) {
-      console.log('Too low, try again.');
-      guessNum = Number(prompt('pick a number between 1 and 25'));
-    } else if (guessNum > correctAnswer) {
-      console.log('Too high, try again.');
-      guessNum = Number(prompt('pick a number between 1 and 25'));
-    } else {
-      console.log('Invalid response');
-      guessNum = Number(prompt('pick a number between 1 and 25'));
-    }
+// function guessNum() {
+//   var correctAnswer = math.floor(math.random(25));
+//   var guessNum = Number(prompt('pick a number between 1 and 25'));
+//   for (var i = 0; i < 4; i++) {
+//     if (guessNum === correctAnswer) {
+//       console.log('Wow you got it!');
+//       break;
+//     } else if (guessNum < correctAnswer) {
+//       console.log('Too low, try again.');
+//       guessNum = Number(prompt('pick a number between 1 and 25'));
+//     } else if (guessNum > correctAnswer) {
+//       console.log('Too high, try again.');
+//       guessNum = Number(prompt('pick a number between 1 and 25'));
+//     } else {
+//       console.log('Invalid response');
+//       guessNum = Number(prompt('pick a number between 1 and 25'));
+//     }
+//   }
+// }
+
+function question6(){
+  var answerArr[Apple pie, Mac and Cheese, Beef ribs];
+  // question to ask what 3 things would i put to gether for a meal?
+// user gets 6 trys to get all 3
+// ?all options to be visible to user`
+
+  for (var i = 0; i < 5; i++){
+
   }
 }
 
-// changes testing a thing)?
+guessNum();
 
+
+
+
+//work to add still
+// point counter for number of right answer in game
+
+question1();
 
 alert('Welcome ' + userName + ', to my about me game! The results of your quiz are as follows');
 alert('Question 1: Is the Sky blue?' + answer1() + ' Question 2: Do woodchucks chuck wood?' + answer2() + ' Question 3: Gravity works Yes or no?' + answer3() + ' Question 4: will the Cyote ever catch The road runner?' + answer4() + ' Question 5: The world is Flat yes or no? ' + answer5() + '.  How Did You Do?');

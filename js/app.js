@@ -5,6 +5,7 @@
 function userName(){
 var userName = prompt ('Can i have your name please?');
 console.log('The Users Name is' + userName);
+return userName
 };
 
 // then assign the name to a variable to be used
@@ -24,14 +25,11 @@ function convertUserInput(userInput){
     return 'yes';
   } else if(userInput.toLowerCase()=== 'no' || userInput.toLowerCase() === 'n'){
     return 'no';
-  } else {
-    return null;
   }
 }
 
-function retry(){
-  var retry = prompt('Try again with something closer to yes or no');
-}
+
+// add a console log to convert answer
 
 
 // function startGame(){
@@ -40,11 +38,11 @@ function retry(){
     
     
     function question1() {
-      var answer1= prompt('Is the Sky blue?');
-      console.log(playerName + ' answered ' + answer1 + ' to Q1!')
-      var convertedAnswer1 = convertUserInput(answer1)
+      var convertedAnswer1 = null;
       while(convertedAnswer1 === null) {
-        retry(question1);
+        var answer1= prompt('Is the Sky blue?');
+        console.log(playerName + ' answered ' + convertedAnswer1 + ' to Q1!')
+        convertedAnswer1 = convertUserInput(answer1);
       }
       if (convertedAnswer1 === 'yes'){
         answer1 = 'correct the sky is blue';
@@ -53,6 +51,7 @@ function retry(){
         answer1 = 'Try again Next time';
         // console.log(answer1 = 'Try again Next time');
       }
+      return answer1;
     }
 question1();
 

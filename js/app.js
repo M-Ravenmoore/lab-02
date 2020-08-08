@@ -125,14 +125,21 @@ function question5() {
   alert(answer5);
   return answer5;
 }
-
+// Add a 7th question that has multiple possible correct answers that are stored in an array.
+// Give the user 6 attempts to guess the correct answer.
+// The guesses will end once the user guesses a correct answer or they run out of attempts.
+// Display all the possible correct answers to the user.
+// Consider using a loop of some sort for this question.
 function question6() {
   var foodArr = ['Lobster Ravioli', 'Mac and Cheese', 'Apple pie', 'Shepards pie', 'lava Cakes', 'Beef ribs', 'Brusselsprouts', 'Key Lime tarts', 'Stuffed Mushrooms'];
   var answerArr = ['Apple pie', 'Mac and Cheese', 'Beef ribs'];
+
+// loop for counting trys
   for (var i = 6 ; i > 0 ; i--){
     var answer6 = prompt('Tell me what 3 things i would put to getheter for a supurb meal');
     var finalAnswer = false;
     
+    // loop for checking answer aginst answerArr
     for (var n = 0 ; n < answerArr.length; n++){
          
       }

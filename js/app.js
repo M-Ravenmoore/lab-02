@@ -126,17 +126,19 @@ function question5() {
   return answer5;
 }
 
-// function question6()    {
-  // var answer6 = prompt('Tell me what 3 things i would put to getheter for a supurb meal');
-  
-  
-  // var foodArr = ['Lobster Ravioli', 'Mac and Cheese', 'Apple pie', 'Shepards pie', 'lava Cakes', 'Beef ribs', 'Brusselsprouts', 'Key Lime tarts', 'Stuffed Mushrooms'];
-  
-  // var answerArr = ['Apple pie', 'Mac and Cheese', 'Beef ribs'];
-  // for (var i = 0; i < 5; i++){
-  //   if (answer6 === answerArr[        ] )
-  // }
-// all options to be visible to user
+function question6() {
+  var foodArr = ['Lobster Ravioli', 'Mac and Cheese', 'Apple pie', 'Shepards pie', 'lava Cakes', 'Beef ribs', 'Brusselsprouts', 'Key Lime tarts', 'Stuffed Mushrooms'];
+  var answerArr = ['Apple pie', 'Mac and Cheese', 'Beef ribs'];
+  for (var i = 6 ; i > 0 ; i--){
+    var answer6 = prompt('Tell me what 3 things i would put to getheter for a supurb meal');
+    var finalAnswer = false;
+    
+    for (var n = 0 ; n < answerArr.length; n++){
+         
+      }
+    }
+  }
+
 
 function numberGuesser() {
   var guessNum = Number(prompt('pick a number between 1 and 25'));

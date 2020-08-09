@@ -16,10 +16,10 @@ alert('welcome ' + playerName);
 
 
 // Start of guessing game
+var gameScoreTotal = 0;
+// score goes up one per correct answer and down one for each incorrect answer
 
-// change all user input to lowercase
-
-
+// convert all user input to lowercase
 function convertUserInput(userInput){
   if(userInput.toLowerCase() === 'yes' || userInput.toLowerCase() === 'y'){
     return 'yes';
@@ -31,7 +31,7 @@ function convertUserInput(userInput){
   console.log('The player answered ' + convertUserInput())
 }
 
-//Question 1
+// Question 1
 function question1() {
   var convertedAnswer1 = null;
   while(convertedAnswer1 === null) {
@@ -41,12 +41,14 @@ function question1() {
   if (convertedAnswer1 === 'yes'){
     answer1 = 'correct the sky is blue';
     console.log(answer1);
+    gameScoreTotal++;
   } else if (convertedAnswer1 === 'no'){
     answer1 = 'Try again Next time';
     console.log(answer1);
+    gameScoreTotal--;
   }
   console.log(playerName + ' answered ' + convertedAnswer1 + ' to Q1!');
-  alert(answer1);
+  alert(`${answer1} , ${playerName} your score is now ${gameScoreTotal}`);
   return answer1;
 }
 
@@ -60,12 +62,14 @@ function question2() {
   if (convertedAnswer2 === 'yes'){
     answer2 = 'Sorry i dont think so';
     console.log(answer2);
+    gameScoreTotal--;
   } else if (convertedAnswer2 === 'no'){
     answer2 = 'Nope, they dont your right';
     console.log(answer2);
+    gameScoreTotal++;
   }
   console.log(playerName + ' answered ' + convertedAnswer2 + ' to Q2!');
-  alert(answer2);
+  alert(`${answer2} , ${playerName} your score is now ${gameScoreTotal}`);
   return answer2;
 }
 
@@ -79,12 +83,14 @@ function question3() {
   if (convertedAnswer3 === 'yes'){
     answer3 = 'Most of the time you are correct!';
     console.log(answer3);
+    gameScoreTotal++;
   } else if (convertedAnswer3 === 'no'){
     answer3 = 'Not always no';
     console.log(answer3);
+    gameScoreTotal--;
   }
   console.log(playerName + ' answered ' + convertedAnswer3 + ' to Q3!');
-  alert(answer3);
+  alert(`${answer3}, ${playerName} your score is now ${gameScoreTotal}`);
   return answer3;
 }
 
@@ -98,12 +104,14 @@ function question4() {
   if (convertedAnswer4 === 'yes'){
     answer4 = 'Not if he keeps using ACME products';
     console.log(answer4);
+    gameScoreTotal--;
   } else if (convertedAnswer4 === 'no'){
-    answer4 = 'That bird is too Fast';
+    answer4 = 'You are absoultly Correct, That bird is too Fast';
     console.log(answer4);
+    gameScoreTotal++;
   }
   console.log(playerName + ' answered ' + convertedAnswer4 + ' to Q4!');
-  alert(answer4);
+  alert(`${answer4}, ${playerName} your score is now ${gameScoreTotal}`);
   return answer4;
 }
 
@@ -117,12 +125,14 @@ function question5() {
   if (convertedAnswer5 === 'yes'){
     answer5 = 'No, Go READ A BOOK';
     console.log(answer5);
+    gameScoreTotal--;
   } else if (convertedAnswer5 === 'no'){
+    answer5 = 'YES, Thank you for having a brain';
     console.log(answer5);
-    answer5 = 'Thank you for having a brain';
+    gameScoreTotal++;
   }
   console.log(playerName + ' answered ' + convertedAnswer5 + ' to Q5');
-  alert(answer5);
+  alert(`${answer5}, ${playerName} your score is now ${gameScoreTotal}`);
   return answer5;
 }
 
@@ -144,14 +154,18 @@ function numberGuesser() {
   for (var i = 0; i < 3; i++) {
     if (guessNum === correctAnswer) {
     console.log('Wow you got it!');
-    alert('thats right! Exactly')
+    alert('thats right! Exactly');
+    gameScoreTotal++;
+
     break;
     } else if (guessNum < correctAnswer) {
     console.log('Too low, try again.');
+    gameScoreTotal--;
     alert('Too low, Try again.')
     guessNum = Number(prompt('pick a number between 1 and 25'));
     } else if (guessNum > correctAnswer) {
     console.log('Too high, try again.');
+    gameScoreTotal--;
     alert('Too high, try again')
     guessNum = Number(prompt('pick a number between 1 and 25'));
     } else {

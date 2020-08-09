@@ -125,26 +125,43 @@ function question5() {
   alert(answer5);
   return answer5;
 }
-// Add a 7th question that has multiple possible correct answers that are stored in an array.
-// Give the user 6 attempts to guess the correct answer.
-// The guesses will end once the user guesses a correct answer or they run out of attempts.
-// Display all the possible correct answers to the user.
-// Consider using a loop of some sort for this question.
-function question6() {
-  var foodArr = ['Lobster Ravioli', 'Mac and Cheese', 'Apple pie', 'Shepards pie', 'lava Cakes', 'Beef ribs', 'Brusselsprouts', 'Key Lime tarts', 'Stuffed Mushrooms'];
-  var answerArr = ['Apple pie', 'Mac and Cheese', 'Beef ribs'];
 
+
+
+function question6() {
+  var foodArr = ['Lobster-Ravioli', 'Mac-and-Cheese', 'Apple-Pie', 'Shepards-Pie', 'Lava-Cakes', 'Beef-Ribs', 'Brusselsprouts', 'Key-Lime-Tarts', 'Stuffed-Mushrooms'];
+  var answerArr = ['Apple-Pie', 'Mac-and-Cheese', 'Beef-Ribs'];
 // loop for counting trys
   for (var i = 6 ; i > 0 ; i--){
-    var answer6 = prompt('Tell me what 3 things i would put to getheter for a supurb meal');
     var finalAnswer = false;
-    
-    // loop for checking answer aginst answerArr
-    for (var n = 0 ; n < answerArr.length; n++){
-         
+    var question = alert('Tell me what 3 things, you think I would put together for a July-4th meal?');
+// answer verify loop checks aginst is in food array   
+   function firstGuess(){
+    var firstAnswer = null;
+    while(firstAnswer === null){
+      var firstAnswer = prompt(`What would be Item 1? Your options are : ${foodArr.toString}`)
+      for(var k = 0 ; k < foodArr.length ; k++){
+        if (firstAnswer === foodArr[k]){
+// checks answer aginst answer array
+          for(var p = 0; p > answerArr.length; p++){
+            if (firstAnswer === answerArr[p]){
+              console.log(`Yes ${firstAnswer} is one of the three thing I would make.`);
+              var firstAnswer = true;
+              } else {
+              console.log(`No I wouldnt put ${firstAnswer} in my Meal`);
+              var firstAnswer = false;
+              };
+              alert(firstAnswer);
+              return firstAnswer;
+              break;
+          }
+          }
+        }
       }
-    }
   }
+  }
+}
+
 
 
 function numberGuesser() {

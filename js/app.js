@@ -131,35 +131,41 @@ function question5() {
 function question6() {
   var foodArr = ['Lobster-Ravioli', 'Mac-and-Cheese', 'Apple-Pie', 'Shepards-Pie', 'Lava-Cakes', 'Beef-Ribs', 'Brusselsprouts', 'Key-Lime-Tarts', 'Stuffed-Mushrooms'];
   var answerArr = ['Apple-Pie', 'Mac-and-Cheese', 'Beef-Ribs'];
-// loop for counting trys
-  for (var i = 6 ; i > 0 ; i--){
-    var finalAnswer = false;
-    var question = alert('Tell me what 3 things, you think I would put together for a July-4th meal?');
-// answer verify loop checks aginst is in food array   
-   function firstGuess(){
+  // answer verify loop checks aginst is in food array   
+  function firstGuess(){
     var firstAnswer = null;
     while(firstAnswer === null){
-      var firstAnswer = prompt(`What would be Item 1? Your options are : ${foodArr.toString}`)
+      var firstAnswer = prompt(`What would be Item 1? Your options are : ${foodArr}`)
       for(var k = 0 ; k < foodArr.length ; k++){
-        if (firstAnswer === foodArr[k]){
-// checks answer aginst answer array
-          for(var p = 0; p > answerArr.length; p++){
+      if (firstAnswer === foodArr[k]){
+        var answerPass = "pass";
+        
+        // checks answer aginst answer array
+        for(var p = 0; p > answerArr.length; p++){
+          while (answerPass === "pass"){
             if (firstAnswer === answerArr[p]){
+              var firstAnswer = `${answerArr[p]} is on of the items`;
               console.log(`Yes ${firstAnswer} is one of the three thing I would make.`);
-              var firstAnswer = true;
-              } else {
+            } else {
+              var firstAnswer = `${answerArr[p]} is on of the items`;
               console.log(`No I wouldnt put ${firstAnswer} in my Meal`);
-              var firstAnswer = false;
-              };
-              alert(firstAnswer);
-              return firstAnswer;
-              break;
+            };
           }
+          alert(firstAnswer);
+          return firstAnswer;
+          break;
           }
         }
       }
+    }
   }
-  }
+  // loop for counting trys
+  for (var i = 6 ; i > 0 ; i--){
+    var finalAnswer = false;
+    var question = alert('Tell me what 3 things, you think I would put together for a July-4th meal?');
+    firstGuess();
+  
+    }
 }
 
 
@@ -193,10 +199,10 @@ function numberGuesser() {
 
     
     
-question1();
-question2();
-question3();
-question4();
-question5();
-
+// question1();
+// question2();
+// question3();
+// question4();
+// question5();
+question6();
 numberGuesser();

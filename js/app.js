@@ -143,22 +143,23 @@ function question6() {
     var foodArr = ['Lobster-Ravioli', 'Mac-and-Cheese', 'Apple-Pie', 'Shepards-Pie', 'Lava-Cakes', 'Beef-Ribs', 'Brusselsprouts', 'Key-Lime-Tarts', 'Stuffed-Mushrooms'];
     var answerArr = ['Apple-Pie', 'Mac-and-Cheese', 'Beef-Ribs'];
     
+    
     // answer verify loop checks aginst is in food array     
-      function verifyResponse(userInput){
-          var input = true;
-          while(input === true){
-            for(var i=0; i < foodArr.length; i++){
-              if(userInput === foodArr[i]){
-                var input = userInput;
-                console.log(`${userName} input accepted ${userInput}`);
-                return [verifiedResponse];
-              }else {
-                console.log(`${userName} input not accepted try again!`)
-              }
-            }
-          }
+    function verifyResponse(userInput){
+      var input = true;
+      while(input === true){
+        for(var i=0; i < foodArr.length; i++){
+          if(userInput === foodArr[i]){
+            var input = userInput;
+            console.log(`${userName} input accepted ${input}`);
+            return [verifiedResponse];
+          }else {
+            console.log(`${userName} input not accepted try again!`)
+          };
+        };
       };
-      
+    };
+    function gameQuestions(){
       function firstAnswer(verifiedResponse){
         var foodItem1 = true;
         while(foodItem1 === true){
@@ -175,7 +176,7 @@ function question6() {
           };
         };
       };
-
+      
       function secondAnswer(verifiedResponse){
         var foodItem2 = true;
         while(foodItem2 === true){
@@ -192,7 +193,7 @@ function question6() {
           };
         };
       };
-
+      
       function thirdAnswer(verifiedResponse){
         var foodItem3 = true;
         while(foodItem3 === true){
@@ -204,17 +205,22 @@ function question6() {
             } else {
               var foodItem3 = verifiedResponse;
               console.log(`No ${foodItem1} is not on my menu.`);
-              return foodItem1;
+              return foodItem3;
             };
           };
         };
       };
-  
     }
+    var userInput = prompt(`what 3 items make a 4th of july dinner?  you options are: ${foodArr}`);
+    
+    
+    verifyResponse(userInput);
+    }
+    firstAnswer();
+    secondAnswer();
+    thirdAnswer();
   }
-
-
-
+  
 
 function numberGuesser() {
   var guessNum = Number(prompt('pick a number between 1 and 25'));
@@ -249,10 +255,10 @@ function numberGuesser() {
 
     
     
-// question1();
-// question2();
-// question3();
-// question4();
-// question5();
+question1();
+question2();
+question3();
+question4();
+question5();
 question6();
 // numberGuesser();

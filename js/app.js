@@ -129,44 +129,80 @@ function question5() {
 
 
 function question6() {
-  var foodArr = ['Lobster-Ravioli', 'Mac-and-Cheese', 'Apple-Pie', 'Shepards-Pie', 'Lava-Cakes', 'Beef-Ribs', 'Brusselsprouts', 'Key-Lime-Tarts', 'Stuffed-Mushrooms'];
-  var answerArr = ['Apple-Pie', 'Mac-and-Cheese', 'Beef-Ribs'];
-  // answer verify loop checks aginst is in food array   
-  function firstGuess(){
-    var firstAnswer = null;
-    while(firstAnswer === null){
-      var firstAnswer = prompt(`What would be Item 1? Your options are : ${foodArr}`)
-      for(var k = 0 ; k < foodArr.length ; k++){
-      if (firstAnswer === foodArr[k]){
-        var answerPass = "pass";
-        
-        // checks answer aginst answer array
-        for(var p = 0; p > answerArr.length; p++){
-          while (answerPass === "pass"){
-            if (firstAnswer === answerArr[p]){
-              var firstAnswer = `${answerArr[p]} is on of the items`;
-              console.log(`Yes ${firstAnswer} is one of the three thing I would make.`);
+  for(var j = 6 ; j >= 0 ; j--){
+    var foodArr = ['Lobster-Ravioli', 'Mac-and-Cheese', 'Apple-Pie', 'Shepards-Pie', 'Lava-Cakes', 'Beef-Ribs', 'Brusselsprouts', 'Key-Lime-Tarts', 'Stuffed-Mushrooms'];
+    var answerArr = ['Apple-Pie', 'Mac-and-Cheese', 'Beef-Ribs'];
+    
+    // answer verify loop checks aginst is in food array     
+      function verifyResponse(userInput){
+          var input = true;
+          while(input === true){
+            for(var i=0; i < foodArr.length; i++){
+              if(userInput === foodArr[i]){
+                var input = userInput;
+                console.log(`${userName} input accepted ${userInput}`);
+                return [verifiedResponse];
+              }else {
+                console.log(`${userName} input not accepted try again!`)
+              }
+            }
+          }
+      };
+      
+      function firstAnswer(verifiedResponse){
+        var foodItem1 = true;
+        while(foodItem1 === true){
+          for(var e = 0; e < answerArr.length; e++){
+            if(verifiedResponse === answerArr[e]){
+              var foodItem1 = verifiedResponse;
+              console.log(`Yes ${foodItem1} belongs on my menu.`);
+              return foodItem1;
             } else {
-              var firstAnswer = `${answerArr[p]} is on of the items`;
-              console.log(`No I wouldnt put ${firstAnswer} in my Meal`);
+              var foodItem1 = verifiedResponse;
+              console.log(`No ${foodItem1} is not on my menu.`);
+              return foodItem1;
             };
-          }
-          alert(firstAnswer);
-          return firstAnswer;
-          break;
-          }
-        }
-      }
-    }
-  }
-  // loop for counting trys
-  for (var i = 6 ; i > 0 ; i--){
-    var finalAnswer = false;
-    var question = alert('Tell me what 3 things, you think I would put together for a July-4th meal?');
-    firstGuess();
+          };
+        };
+      };
+
+      function secondAnswer(verifiedResponse){
+        var foodItem2 = true;
+        while(foodItem2 === true){
+          for(var e = 0; e < answerArr.length; e++){
+            if(verifiedResponse === answerArr[e]){
+              var foodItem2 = verifiedResponse;
+              console.log(`Yes ${foodItem2} belongs on my menu.`);
+              return foodItem2;
+            } else {
+              var foodItem2 = verifiedResponse;
+              console.log(`No ${foodItem2} is not on my menu.`);
+              return foodItem2;
+            };
+          };
+        };
+      };
+
+      function thirdAnswer(verifiedResponse){
+        var foodItem3 = true;
+        while(foodItem3 === true){
+          for(var e = 0; e < answerArr.length; e++){
+            if(verifiedResponse === answerArr[e]){
+              var foodItem3 = verifiedResponse;
+              console.log(`Yes ${foodItem1} belongs on my menu.`);
+              return foodItem3;
+            } else {
+              var foodItem3 = verifiedResponse;
+              console.log(`No ${foodItem1} is not on my menu.`);
+              return foodItem1;
+            };
+          };
+        };
+      };
   
     }
-}
+  }
+
 
 
 
@@ -205,4 +241,4 @@ function numberGuesser() {
 // question4();
 // question5();
 question6();
-numberGuesser();
+// numberGuesser();

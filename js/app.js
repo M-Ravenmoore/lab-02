@@ -145,11 +145,12 @@ function question6() {
   for (var i = 6 ; i > 0 ; i--){
     var finalAnswer = false;
     var question = alert('Tell me what 3 things, you think I would put together for a July-4th meal?');
+
 // answer verify loop checks aginst is in food array   
-   function firstGuess(){
+   function firstGuess() {
     var firstAnswer = null;
     while(firstAnswer === null){
-      var firstAnswer = prompt(`What would be Item 1? Your options are : ${foodArr.toString}`)
+      var firstAnswer = prompt(`What would be Item 1? Your options are : ${foodArr}`)
       for(var k = 0 ; k < foodArr.length ; k++){
         if (firstAnswer === foodArr[k]){
 // checks answer aginst answer array
@@ -169,6 +170,8 @@ function question6() {
         }
       }
   }
+  firstGuess();
+  break;
   }
 }
 
@@ -204,13 +207,14 @@ function numberGuesser() {
   return guessNum;
 }
 
-
+console.log(`the ${userName} final score ${gameScoreTotal}.`)
     
     
-question1();
-question2();
-question3();
-question4();
-question5();
+// question1();
+// question2();
+// question3();
+// question4();
+// question5();
+question6();
 
-numberGuesser();
+// numberGuesser();
